@@ -1,6 +1,6 @@
-An ActionScript 3 Library that contains a number of classes and utilities for working with ActionScript? 3. These include classes for MD5 and SHA 1 hashing, Image encoders, and JSON serialization as well as general String, Number and Date APIs.
+这是一个包含多个使用ActionScript 3处理的类和工具的ActionScript 3库。包括MD5和SHA-1哈希算法类、图像编码器、JSON序列化类，以及常规的字符串、数字和日期API。
 
-Code is released under a BSD License:
+代码以BSD许可证发布:
 http://www.opensource.org/licenses/bsd-license.php
 
 Copyright (c) 2008, Adobe Systems Incorporated
