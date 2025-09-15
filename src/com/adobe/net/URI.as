@@ -817,7 +817,7 @@ package com.adobe.net
 		 * is used.  This URI class supports the common "param=value"
 		 * style query syntax via the get/setQueryValue() and
 		 * get/setQueryByMap() functions.  Those functions should be used
-		 * instead if the common syntax is being used.
+		 * instead if the common syntax is being used.</p>
 		 * 
 		 * <p>The URI RFC does not specify any particular
 		 * syntax for the query part of a URI.  It is intended to allow
@@ -825,7 +825,7 @@ package com.adobe.net
 		 * However, most systems have standardized on the typical CGI
 		 * format:</p>
 		 * 
-		 * <listing>http://site.com/script.php?param1=value1&param2=value2</listing>
+		 * <listing>http://site.com/script.php?param1=value1&amp;param2=value2</listing>
 		 * 
 		 * <p>This class has specific support for this query syntax</p>
 		 * 
@@ -840,7 +840,7 @@ package com.adobe.net
 		 * important, it is recommended that get/setQueryValue() or
 		 * get/setQueryByMap() are used instead.</p>
 		 * 
-		 * If a different query syntax is being used, a subclass of URI
+		 * If a different query syntax is being used, a subclass of URI 
 		 * can be created to handle that specific syntax.
 		 *  
 		 * @see URI.getQueryValue, URI.getQueryByMap
@@ -1049,10 +1049,10 @@ package com.adobe.net
 		/**
 		 * Get the value for the specified named in the query part.  This
 		 * assumes the query part of the URI is in the common
-		 * "name1=value1&name2=value2" syntax.  Do not call this function
+		 * <code>name1=value1&amp;name2=value2</code> syntax.  Do not call this function
 		 * if you are using a custom query syntax.
 		 * 
-		 * @param name	name of the query value to get.
+		 * @param name name of the query value to get.
 		 * 
 		 * @return the value of the query name, empty string if the
 		 * query name does not exist.
@@ -1228,7 +1228,7 @@ package com.adobe.net
 		 * intended to be called on each individual "name" and "value"
 		 * in the query making sure that nothing in the name or value
 		 * strings contain characters that would conflict with the query
-		 * syntax (e.g. '=' and '&').
+		 * syntax (e.g. &apos;=&apos; and &apos;&amp;&apos;).
 		 * 
 		 * @param unescaped		unescaped string that is to be escaped.
 		 * 
@@ -1468,14 +1468,14 @@ package com.adobe.net
 		 * Get the ".xyz" file extension from the filename in the URI.
 		 * For example, if we have the following URI:
 		 * 
-		 * <listing>http://something.com/path/to/my/page.html?form=yes&name=bob#anchor</listing>
+		 * <listing>http://something.com/path/to/my/page.html?from=yes&amp;name=bob#anchor</listing>
 		 * 
-		 * <p>This will return ".html".</p>
+		 * This will return ".html".
 		 * 
 		 * @param minusDot   If true, this will strip the dot from the extension.
 		 * If true, the above example would have returned "html".
 		 * 
-		 * @return  the file extension
+		 * @return the file extension
 		 */
 		public function getExtension(minusDot:Boolean = false) : String
 		{
